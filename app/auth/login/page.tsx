@@ -40,7 +40,7 @@ export default function LoginPage() {
         {/* Logo */}
         <div className="text-center mb-8">
           <h1 className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-            Suplatzigram
+            Supagram
           </h1>
           <p className="text-foreground/60 mt-2">Inicia sesión en tu cuenta</p>
         </div>
@@ -68,11 +68,10 @@ export default function LoginPage() {
           {/* Mensaje de estado */}
           {message && (
             <div
-              className={`px-4 py-3 rounded-xl text-sm ${
-                message.type === "success"
+              className={`px-4 py-3 rounded-xl text-sm ${message.type === "success"
                   ? "bg-green-500/10 text-green-500 border border-green-500/20"
                   : "bg-red-500/10 text-red-500 border border-red-500/20"
-              }`}
+                }`}
             >
               {message.text}
             </div>
