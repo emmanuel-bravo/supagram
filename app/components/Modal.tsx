@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { getTimeAgo } from "../utils/time";
-import HeartIcon from "./HeartIcon";
 import { Post } from "../types";
+import { HeartIcon } from "./HeartIcon";
 
 export default function Modal({
   post,
@@ -11,7 +11,7 @@ export default function Modal({
   onClose: () => void;
 }) {
 
-  const username = post.profile?.username || 'Emma';
+  const username = post.profile?.username || 'default user';
   const avatarUrl = post.profile?.avatar_url || "/user1.jpg";
 
   console.log(avatarUrl)
@@ -78,7 +78,7 @@ export default function Modal({
           <div className="flex items-center gap-2">
             <HeartIcon filled={true} />
             <span className="text-lg font-bold text-foreground">
-              {post.likes.toLocaleString()} likes
+              {post.likes_count.toLocaleString()} likes
             </span>
           </div>
           <p className="mt-2 text-foreground">
